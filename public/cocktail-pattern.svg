@@ -1,0 +1,19 @@
+<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="cocktail-pattern" x="0" y="0" width="60" height="60" patternUnits="userSpaceOnUse">
+      <!-- Cocktail Glass 1 -->
+      <path d="M10 40L15 20H25L30 40" fill="none" stroke="#FFC0CB" stroke-width="1" opacity="0.5"/>
+      <path d="M13 25H27" stroke="#FFC0CB" stroke-width="1" opacity="0.5"/>
+      
+      <!-- Cocktail Glass 2 -->
+      <path d="M40 50L45 30H55L60 50" fill="none" stroke="#FFB6C1" stroke-width="1" opacity="0.5"/>
+      <path d="M43 35H57" stroke="#FFB6C1" stroke-width="1" opacity="0.5"/>
+      
+      <!-- Cocktail Glass 3 -->
+      <path d="M-5 20L0 0H10L15 20" fill="none" stroke="#FFA07A" stroke-width="1" opacity="0.5"/>
+      <path d="M-2 5H12" stroke="#FFA07A" stroke-width="1" opacity="0.5"/>
+    </pattern>
+  </defs>
+  <rect width="60" height="60" fill="url(#cocktail-pattern)"/>
+</svg>
+

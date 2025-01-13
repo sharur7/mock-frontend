@@ -1,0 +1,18 @@
+<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="mocktail-icons" x="0" y="0" width="60" height="60" patternUnits="userSpaceOnUse">
+      <!-- Cocktail Glass -->
+      <path d="M20 15L30 40L40 15H20Z" fill="none" stroke="#93C5FD" stroke-width="1"/>
+      <!-- Straw -->
+      <path d="M28 15V5" stroke="#60A5FA" stroke-width="1"/>
+      <!-- Umbrella -->
+      <path d="M35 10C35 10 40 12 40 15" stroke="#3B82F6" stroke-width="1"/>
+      <!-- Ice Cube -->
+      <rect x="25" y="45" width="5" height="5" fill="#BFDBFE"/>
+      <!-- Lemon Slice -->
+      <circle cx="45" cy="45" r="5" fill="#FDE68A"/>
+    </pattern>
+  </defs>
+  <rect width="60" height="60" fill="url(#mocktail-icons)" opacity="0.2"/>
+</svg>
+
