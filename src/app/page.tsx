@@ -1,6 +1,7 @@
 'use client';
 
 /* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable react/no-unescaped-entities */
 
 import { useState } from 'react'
 import { GlassWater, Loader2, Download, Book, Info, HelpCircle, RefreshCw } from 'lucide-react'
