@@ -1,24 +1,25 @@
-'use server'
+'use server';
 
-export async function generateMocktailRecipe(formData: FormData) {
+export async function generateMocktailRecipe(formData: FormData): Promise<{ success: boolean; recipe?: string; error?: string }> {
   try {
-    const mocktail = formData.get('mocktail') as string
+    const mocktail = formData.get('mocktail') as string;
     const response = await fetch(`https://render-mock-0wyd.onrender.com/ask?question=${encodeURIComponent(mocktail)}`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: "",
-    })
-    
+      body: JSON.stringify({}),
+    });
+
     if (!response.ok) {
-      throw new Error('Failed to fetch recipe')
+      throw new Error('Failed to fetch recipe');
     }
 
-    const data = await response.json()
-    return { success: true, recipe: data.answer }
+    const data: { answer: string } = await response.json();
+    return { success: true, recipe: data.answer };
   } catch (error) {
-    return { success: false, error: 'Failed to generate mocktail recipe. Please try again!' }
+    const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+    console.error('Error generating mocktail recipe:', errorMessage);
+    return { success: false, error: 'Failed to generate mocktail recipe. Please try again!' };
   }
 }
-
