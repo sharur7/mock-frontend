@@ -92,7 +92,7 @@ export default function MocktailGenerator() {
             <Tooltip>
               <TooltipTrigger asChild>
                 <Button
-                  onClick={() => handleDownload(EXTRA_BOOK_CONTENT, "mocktail-recipe-book.txt")}
+                  onClick={() => window.open('/rep.pdf', '_blank')}
                   className="absolute top-0 right-0 rounded-full w-12 h-12 bg-pink-500 hover:bg-pink-600 text-white flex items-center justify-center"
                 >
                   <Book className="h-6 w-6" />
@@ -197,7 +197,7 @@ export default function MocktailGenerator() {
               <CardTitle>Your Mocktail Recipe</CardTitle>
               <CardDescription>Follow these steps to mocktail mastery! 🎉</CardDescription>
             </CardHeader>
-            <CardContent>
+            <CardContent className="h-96 overflow-auto">
               {error ? (
                 <p className="text-red-500">{error}</p>
               ) : recipe ? (
@@ -225,9 +225,6 @@ export default function MocktailGenerator() {
             </CardContent>
           </Card>
         </div>
-        <footer className="text-center text-gray-600 py-4 mt-8">
-          <p>© {new Date().getFullYear()} Mocktail Magic Mixer. Made with 💗 by your mixology companion.</p>
-        </footer>
       </div>
     </div>
   )
